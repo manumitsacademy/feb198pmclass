@@ -1,0 +1,11 @@
+<div>
+  <h1>Add Student Form</h1>
+  <form [formGroup]="studentForm">
+    <input type="text" formControlName="firstname"><br>
+    <input type="text" formControlName="lastname"><br>
+    <input type="text" formControlName="age"><br>
+    <input type="text" formControlName="location"><br>
+    <button (click)="addStudent()" [disabled]="!studentForm.valid">Add Student</button>
+    <button (click)="resetStudentForm()">Reset</button>
+  </form>
+</div>

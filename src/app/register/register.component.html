@@ -1,0 +1,17 @@
+<form  method="post" action="http://abc.com/reg.php" #regform="ngForm" (ngSubmit)="regFun(regform)">
+  username:<input type="text" name="uname" #username="ngModel" [ngModel] required><br>
+  password:<input type="text" name="pwd" #password="ngModel" [ngModel] required><br>
+  email:<input type="text" name="email" #email="ngModel" [ngModel]><br>
+  contactnumber:<input type="text" name="contact" #contactnumber="ngModel" [ngModel] required minlength="10"><br>
+  <div *ngIf="contactnumber.errors">
+    <b *ngIf="contactnumber.touched && contactnumber.errors.required">Contact number should be filled</b>
+    <b *ngIf="contactnumber.touched && contactnumber.errors.minlength">Contact number should be 10 digited</b>
+  </div>
+  <input type='submit' value="submit" [disabled]="regform.status=='INVALID'">
+</form>
+<button (click)="abc(contactnumber)">click</button>
+<!--
+1.assign 'ngForm' directive to a template variable in the form element
+2. assign 'ngModel' directove to a template variable in the each input element
+3. bind the [ngModel] property to each input
+-->
