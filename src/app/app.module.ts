@@ -9,13 +9,15 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutusComponent,
     RegisterComponent,
-    AddStudentComponent
+    AddStudentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

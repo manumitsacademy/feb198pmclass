@@ -1,0 +1,5 @@
+<form #loginform="ngForm">
+  <input type="text" name="username" #username="ngModel" [ngModel]>
+  <input type="text" name="password" #username="ngModel" [ngModel]>
+  <button (click)="login(loginform.value)">Login</button>
+</form>
